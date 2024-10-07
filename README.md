@@ -85,7 +85,7 @@ secciones se detallará esto.
 ### Rendimiento
 
 El modelo obtuvo excelentes rendimientos, al utilizar AUC-ROC, sensibilidad, precisión y F1. Las puntuaciones fueron 0.99, 1, 0.99 y 0.99, respectivamente. Otro
- método para evaluar nuestro modelo implicó el uso de la matriz de confusión. La matriz de confusión indicó 22 falsos positivos, un número relativamente pequeño
+ método para evaluar nuestro modelo implicó el uso de la matriz de confusión. La matriz de confusión indicó 28 falsos positivos, un número relativamente pequeño
  en comparación con los verdaderos positivos (56,976). Esto implica la generalización del modelo. La siguiente image muestran la matriz de confusión.
 
 ![matriz-de-confusion](./matriz-de-confusion.png)
