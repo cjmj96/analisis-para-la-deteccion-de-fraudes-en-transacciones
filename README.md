@@ -116,8 +116,48 @@ En función a los conocimientos adquiridos sobre los patrones de transacciones f
  con capacidades de generalización e interpretabilidad, usando árboles de decisión con aumento de gradiente (ADAG), implementado
  en XGBoost, a continuación se ofrecen algunas recomendaciones prácticas:
 
-- Implementar modelo en producción: Al implementar este modelo SecureSwipe Solutions tiene una ventaja competitiva, ya que pueden ofrecer
-mejor protección a los clientes de los bancos mientras se mantiene la transparencia y cumplimiento normativo.
+- Implementar modelo en producción: Basado en los resultados obtenidos el modelo es suficientemente robusto como para reemplazar el actual sistema de reglas 
+estáticas. Se recomienda proceder con la implementación del modelo a nivel de producción para mejorar la detección de fraude y 
+reducir las pérdidas financieras.
 
-- Garantizar mejora continua: Al entender que `V14` es la característica más critica de rendimiento del modelo, se debe enfocar en
-refinar y actualizarla para mantener la efectividad del modelo con el tiempo.
+- Optimizar la interfaz con el cliente basada en interpretabilidad: Crear una interfaz clara y sencilla que explique las decisiones del modelo
+ a los comerciantes y clientes. Por ejemplo, si una transacción es clasificada como sospechosa, el sistema debería poder exponer
+ las principales razones de tal clasificación utilizando las características clave (como la 'V14') con explicaciones comprensibles. Esto es
+ fundamental para mantener la confianza de los clientes cuando una transacción legítima es marcada como potencialmente fraudulenta.
+Además se deberían implementar notificaciones en tiempo real para que los clientes puedan revisar inmediatamente las transacciones
+ etiquetadas como sospechosas, y proporcionar un sistema eficiente para que puedan confirmar o refutar rápidamente la decisión.
+
+- Proveer soporte y retroalimentación: Implementar un sistema de soporte activo para que los clientes de las compañías que se procesan los
+ pagos, puedan reportar rápidamente problemas o dudas sobre el sistema de detección de fraude. Esta retroalimentación puede ser 
+valiosa para mejorar tanto el modelo como la experiencia del cliente.
+
+- Monitorear las métricas clave en producción: Aunque el modelo ha mostrado una alta tasa de precisión y sensibilidad, es fundamental
+ monitorear continuamente su rendimiento en producción. Las amenazas de fraude evolucionan rápidamente, por lo que se
+ recomienda implementar un sistema de monitorización que rastree métricas como la tasa de falsos positivos y negativos, la tasa
+ de fraude detectado y las pérdidas financieras evitadas. 
+
+- Reentrenar el modelo periódicamente: A medida que se acumulan más datos de transacciones, es importante
+ reentrenar el modelo regularmente para que continúe aprendiendo de nuevos patrones de fraude y no se
+ quede obsoleto. Se recomienda un ciclo de reentrenamiento periódicamente, por ejemplo, cada 3-6 meses,
+ o cuando los indicadores clave de rendimiento comiencen a deteriorarse.
+
+- Revisar manualmente los falsos negativos importantes: Aunque el modelo muestra una alta sensibilidad, es fundamental tener un equipo dedicado
+ que revise manualmente las transacciones que el modelo no marca como sospechosas pero que los clientes o sistemas de auditoría
+ identifiquen posteriormente como fraudulentas. Estos casos pueden proporcionar retroalimentación valiosa para ajustar el modelo.
+
+- Enfocarse en las características clave: El análisis mostró que la característica ‘V14’ es la más relevante para la detección de fraude, con un
+ valor SHAP promedio global de 0.17, marcadamente superior a las demás características. Se recomienda realizar un análisis más profundo
+ de qué representa esta característica y cómo se puede mejorar su recolección de datos o representación en el sistema. Además, dado
+ que la cantidad de dinero transferido (‘Amount’) fue identificada como la característica menos importante, se podría reconsiderar el
+ peso que se le asigna a esta variable en otros sistemas de decisión.
+
+- Explorar nuevas características: A medida que SecureSwipe crezca, es importante explorar la posibilidad de
+ integrar nuevas características que podrían mejorar aún más la precisión del modelo. Esto podría incluir 
+datos geográficos, patrones de comportamiento del usuario, o tiempos de transacción.
+
+- Medir las pérdidas financieras evitadas al implementar el modelo: Una vez que el modelo esté en producción, se recomienda realizar un análisis
+ detallado del impacto financiero de la implementación, midiendo las pérdidas evitadas debido a la detección activa de fraude. Esto permitirá
+ calcular el retorno de inversión (ROI) del nuevo sistema. 
+
+- Analizar los costos de falsos positivos: Dado que los falsos positivos también generan costos al bloquear transacciones legítimas, es
+ importante analizar el impacto financiero de estas transacciones erróneamente clasificadas y ajustarlas en consecuencia.
