@@ -2,30 +2,26 @@
 
 ## Antecedentes y visión general
 
-SecureSwipe Solutions es una empresa de tecnología financiera en rápido crecimiento que presta servicios
- de procesamiento de pagos a comerciantes en línea y tiendas físicas de toda Europa. Fundada en 2020,
- la compañía ha experimentado un crecimiento exponencial, procesando cientos de miles de
- transacciones al mes. Sin embargo, con este crecimiento, SecureSwipe ha identificado un alarmante
- aumento en las transacciones fraudulentas, que está causando pérdidas financieras y dañando
- la reputación de la compañía entre sus clientes comerciales.
+Secure Swipe solutions, fundada en 2020, se dedica al manejo de pagos en comercios virtuales y 
+físicos que abarcan Europa. Actualmente, tiene un desarrollo exponencial, al manejar cientos 
+de miles de transacciones por mes. El problema que presenta la empresa es del aumento rápido 
+de transacciones fraudulentas que provocan no solo pérdidas económicas, también la confianza de los clientes.
 
-El actual sistema de detección del fraude en SecureSwipe se basa en reglas estáticas y está 
-demostrando ser inadecuado para identificar patrones sofisticados de fraude. La empresa ha
- observado que los estafadores están adaptando sus técnicas más rápido de lo que las 
-actualizaciones manuales de reglas pueden seguir. Esto ha dado lugar a falsos 
-positivos (transacciones legítimas marcadas como fraudulentas) y falsos
- negativos (transacciones fraudulentas que no se detectan).
+La empresa usa un sistema de detección basado en reglas estáticas, que demuestran ser inadecuados para 
+identificar patrones sofisticados para realizar transacciones fraudulentas. Los estafadores encuentran 
+en menor tiempo nuevas maneras de vencer al sistema. Esto produce falsos positivos (transacciones 
+legítimas clasificados como fraudulentas) y falsos negativos (transacciones fraudulentas 
+clasificados como legítimas).
 
-Para abordar estos desafíos, el liderazgo de SecureSwipe ha decidido implementar un sistema
- más avanzado y basado en datos de detección de fraude que utiliza 
-técnicas de aprendizaje automático. Creen que al aprovechar la gran cantidad de datos 
-de transacciones que han acumulado, pueden crear un modelo de detección de fraude más preciso y adaptable.
+La empresa ha decido actualizar el actual sistema con uno más avanzado que use los datos recolectados por
+ la empresa para entrenar modelos basados en técnicas de aprendizaje automático. El objetivo es crear 
+ un modelo más preciso y adaptable.
 
-Este proyecto analiza los datos de transacciones para el entrenamiento de un modelo de aprendizaje automático, que
-predicirá si una transacción es fraudulenta o legítima.
+Este proyecto usa los datos de transacciones recogidos por la empresa para el entrenamiento de un modelo 
+de aprendizaje automático, que clasificará transacciones para determinar si es legítima o fraudulenta.
 
-El conjunto de datos utilizado es de transacciones reales anonimizadas realizadas por usuarios en Europa. Aquí
-se encuentran los [datos](https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023).
+Los datos utilizados son reales y provienen de transacciones anonimizadas hechas por usuarios en 
+Europa. Aquí se encuentran los [datos](https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023).
 
 ### Estructura de datos y exploraciones iniciales
 
