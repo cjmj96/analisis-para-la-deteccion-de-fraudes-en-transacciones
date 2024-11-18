@@ -90,7 +90,7 @@ El modelo obtuvo excelentes rendimientos, al utilizar AUC-ROC, sensibilidad, pre
 ### Interpretabilidad
 
 El modelo incluye capacidades de interpretabilidad al computar valores SHAP. Esto permitió descubrir que la característica más
- importante, por lejos, para predecir si una transacción es fraudulenta o legítima es 'V14' con un valor SHAP promedio global de 0.18, 
+ importante, por lejos, para predecir si una transacción es fraudulenta o legítima es V14 con un valor SHAP promedio global de 0.18, 
 esto representa un 212.5% más que la segunda característica más importante, 'V4' con 0.08. Es importante notar que la 
 característica menos importante para la predicción objetiva del modelo es la cantidad de dinero transferido ('Amount'). La siguiente imagen
 ilustra lo anterior.
@@ -122,4 +122,4 @@ En función a los conocimientos adquiridos sobre los patrones de transacciones f
 
 - Revisar manualmente los falsos negativos importantes: Aunque el modelo muestra una alta sensibilidad, es fundamental tener un equipo dedicado que revise manualmente las transacciones que el modelo no marca como sospechosas pero que los clientes o sistemas de auditoría identifiquen posteriormente como fraudulentas. Estos casos pueden proporcionar retroalimentación valiosa para ajustar el modelo.
 
-- Enfocarse en las características clave: El análisis mostró que la característica ‘V14’ es la más relevante para la detección de fraude, con un valor SHAP promedio global de 0.18, marcadamente superior a las demás características. Se recomienda realizar un análisis más profundo de qué representa esta característica y cómo se puede mejorar su recolección de datos o representación en el sistema. Además, dado que la cantidad de dinero transferido (‘Amount’) fue identificada como la característica menos importante, se podría reconsiderar el peso que se le asigna a esta variable en otros sistemas de decisión.
+- Enfocarse en las características clave: El análisis mostró que la característica V14 es la más relevante para la detección de fraude, con un valor SHAP promedio global de 0.18, marcadamente superior a las demás características. Se recomienda realizar un análisis más profundo de qué representa esta característica y cómo se puede mejorar su recolección de datos o representación en el sistema. Además, dado que la cantidad de dinero transferido (‘Amount’) fue identificada como la característica menos importante, se podría reconsiderar el peso que se le asigna a esta variable en otros sistemas de decisión.
